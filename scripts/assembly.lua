@@ -1,3 +1,4 @@
 
 
-function createPart()
+function createPart():
+	local part = Instance.new("Part")
