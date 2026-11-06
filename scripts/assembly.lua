@@ -114,10 +114,13 @@ end
 -- 		onCharacterAdded(player.Character)
 -- 	end
 -- end)
--- addAccessory(players.LocalPlayer,witchHat)
+addAccessory(players.LocalPlayer,witchHat)
 
 ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 work.DescendantRemoving:Connect(function(descendant)
+	if (decendent == nil) then
+		return
+	end
     if (decendent.Name == "Yaszu") then
 		local folder = Instance.new("Folder")
 		folder.Parent = workspace
@@ -125,6 +128,6 @@ work.DescendantRemoving:Connect(function(descendant)
 		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 	end
 end)
-
+yaszuFolder:ClearAllChildren()
 print("im a goofy goober")
 print("ROCK")
