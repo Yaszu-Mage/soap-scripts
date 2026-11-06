@@ -10,7 +10,8 @@ local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
 local work = game:GetService("Workspace")
 
-
+local part = currenScript.Parent
+local surfaceGUI = 
 
 
 function createPart(x,y,z,width,height,depth,material,color)
