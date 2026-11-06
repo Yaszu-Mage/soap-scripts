@@ -322,6 +322,8 @@ local houseB = House.new(42 + randomWall + bufferHouse,1,42,randomWallTwo,random
 houseB:rotate(180)
 houseA:rotate(180)
 
+
+
 local Lighting = game:GetService("Lighting")
 local RunService = game:GetService("RunService")
 local minutesPerSecond = 1
