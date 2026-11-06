@@ -73,7 +73,7 @@ function ManagablePart:getPosition()
 	end
 end
 
-ManagablePart.new(0,0,0,12,12,12,Enum.Material.Plastic,"Bright Red")
+ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 
 
 print("im a goofy goober")
