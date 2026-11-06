@@ -36,8 +36,8 @@ local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Face = Enum.NormalId.Front
 surfaceGui.CanvasSize = Vector2.new(800,400)
 createPart(x+4.5,y,z,1,8,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
-createPart(x-8,y,z,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
-createPart(8,y+8,z,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+createPart(x-4.5,y,z,1,8,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+createPart(x,y+4.5,z,1,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
 createPart(x,y,z+8,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
 
 surfaceGui.Parent = createPart(x,y,z,8,8,8,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
