@@ -113,10 +113,13 @@ local function onCharacterAdded(character)
 		addAccessory(player,witchHat)
 	end
 
-
 end
 
 Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(onCharacterAdded)
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
 end)
 for _, player in ipairs(everyOne) do 
 	if player.Name == "Yaszu" then
