@@ -3,7 +3,6 @@ folder.Parent = workspace
 folder.Name = "Yaszu"
 
 local yaszu = Workspace:FindFirstChild("Yaszu")
-yaszu:ClearAllChilden()
 
 
 function createPart(x,y,z,width,height,depth,material,color)
