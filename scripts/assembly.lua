@@ -9,6 +9,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 	part.Size = Vector3.new(width, height, depth)
 	part.Material = material
 	part.BrickColor = BrickColor.new(color)
+	workspace.addChild(part)
 	return part
 end
 
@@ -70,6 +71,7 @@ function ManagablePart:getPosition()
 	end
 end
 
+ManagablePart.new(0,4,0,4,4,4,Enum.Material.Plastic,"Bright Red")
 
 
 print("im a goofy goober")
