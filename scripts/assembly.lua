@@ -322,7 +322,7 @@ local houseA = House.new(64,1,42,randomWall,randomY2,randomWall,color,color,colo
 local randomWallTwo = math.random(10,32)
 local houseB = House.new(64 + randomWall + bufferHouse,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
 local houseC = House.new(64 + randomWall2 + randomWall + bufferHouse, 1, 42 + randomWall + bufferHouse + randomWall2, randomY3,color,color,color,color)
-local houseD = House.new(64 - randomWall  -bufferHouse)
+local houseD = House.new(64 - randomWall  - bufferHouse,1,42, randomY, randomWall,color,color,color,color)
 
 houseB:rotate(180)
 houseA:rotate(180)
