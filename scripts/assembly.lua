@@ -1,12 +1,19 @@
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
+local players = game:GetService("Players")
+local everyOne = Players:GetPlayers()
+local yaszuFolder = Workspace:FindFirstChild("Yaszu")
 
-local yaszu = Workspace:FindFirstChild("Yaszu")
-
-for _, child in ipairs(yaszu:GetChildren()) do
+for _, child in ipairs(yaszuFolder:GetChildren()) do
     child:Destroy()
 end
+
+for _, player in ipairs(everyOne) do 
+	if (player.Name == "yaszu")
+	end
+end
+
 
 function createPart(x,y,z,width,height,depth,material,color)
 	local part = Instance.new("Part")
@@ -14,7 +21,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 	part.Size = Vector3.new(width, height, depth)
 	part.Material = material
 	part.BrickColor = BrickColor.new(color)
-	part.Parent = yaszu
+	part.Parent = yaszuFolder
 	return part
 end
 
