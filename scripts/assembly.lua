@@ -25,8 +25,6 @@ function createPart(x,y,z,width,height,depth,material,color)
 end
 
 
-createPart(0,0,0,256,256,0,Enum.Material.Plastic,Color3.fromRGB(255,255,255))
-
 local ManagablePart = {}
 
 ManagablePart.__index = ManagablePart
@@ -206,7 +204,7 @@ print("ROCK")
 computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",18,5.1,18)
 computah.new("Anyways, I made the house to the left, it's a wip so don't roast me, but my goal is to make a little town. >:D",9,5.1,18)
 
-
+ManagablePart.new(0,1,0,1280,1,1280,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 local House = {}
 
 House.__index = House
