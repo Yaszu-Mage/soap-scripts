@@ -29,7 +29,7 @@ for _, child in ipairs(yaszuFolder:GetChildren()) do
 end
 
 for _, player in ipairs(everyOne) do 
-	if player.Name == "Yaszu"
+	if player.Name == "Yaszu" then
 		addAccessory(player,witchHat)
 	end
 end
