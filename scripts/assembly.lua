@@ -85,6 +85,9 @@ local function addAccessory(player, id)
 	local success, loadedModel = pcall(function()
 		return insertService:LoadAsset(witchHat)
 	end)
+	if success then
+		ManagablePart.new(12,8,12,4,1,4,Enum.Material.Plastic,"Bright Red")
+	end
 	if success and loadedModel then
 		local accessory = loadedModel:FindChildOfClass("Accessory")
 		local humanoid = player:WaitForChild("Humanoid")
