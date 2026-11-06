@@ -148,6 +148,7 @@ local function onCharacterAdded(character)
 		bodyColors.LeftLegColor3 = pantColor
 		bodyColors.RightLegColor3 = pantColor
 		bodyColors.TorsoColor3 = shirtColor
+		addAccessory(workspace.Yaszu,witchHat)
 	end
 end
 
