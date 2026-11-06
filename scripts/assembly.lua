@@ -2,10 +2,10 @@
 
 local folder = Instance.new("Folder")
 folder.Parent = workspace
-folder.name = "Yaszu"
+folder.Name = "Yaszu"
 
 local yaszu = Workspace:FindFirstChild("Yaszu")
-
+yaszu:ClearAllChilden()
 
 
 function createPart(x,y,z,width,height,depth,material,color)
@@ -14,7 +14,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 	part.Size = Vector3.new(width, height, depth)
 	part.Material = material
 	part.BrickColor = BrickColor.new(color)
-	part.Parent = workspace.
+	part.Parent = yaszu
 	return part
 end
 
