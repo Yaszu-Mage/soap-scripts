@@ -71,7 +71,6 @@ function ManagablePart:getPosition()
 end
 
 
-ManagablePart.new(0,4,0,4,4,4,Enum.Material.Plastic,"Bright Red")
 
 print("im a goofy goober")
 
