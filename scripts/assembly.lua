@@ -1,4 +1,5 @@
 -- workspace:ClearAllChildren()
+ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
@@ -127,7 +128,11 @@ for _, player in ipairs(everyOne) do
 	end
 end
 
+workspace.DescendantRemoving:Connect(function(descendant)
+    if (decendent.Name == "yaszuFolder") then
+		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+	end
+end)
 
-ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 print("im a goofy goober")
 print("ROCK")
