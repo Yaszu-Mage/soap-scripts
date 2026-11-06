@@ -185,7 +185,7 @@ for _, player in ipairs(players:GetPlayers()) do
 	
 end
 
-ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
+ManagablePart.new(0,1,0,1280,1,1280,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 work.ChildRemoved:Connect(function(descendant)
 	if (decendent == nil) then
 		return
