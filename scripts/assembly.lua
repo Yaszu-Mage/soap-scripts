@@ -319,13 +319,14 @@ local randomY = math.random(10,32)
 local randomY2 = math.random(10,32)
 local randomY3 = math.random(10,32)
 local houseA = House.new(64,1,42,randomWall,randomY2,randomWall,color,color,color,color)
-randomWallTwo = math.random(10,32)
+local randomWallTwo = math.random(10,32)
 local houseB = House.new(64 + randomWall + bufferHouse,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
 local houseC = House.new(64 + randomWall2 + randomWall + bufferHouse, 1, 42 + randomWall + bufferHouse + randomWall2, randomY3,color,color,color,color)
+local houseD = House.new(64 - randomWall  -bufferHouse)
 
 houseB:rotate(180)
 houseA:rotate(180)
-
+houceC:rotate(90)
 
 
 local Lighting = game:GetService("Lighting")
@@ -335,6 +336,16 @@ local computah = computah.new(tostring(Lighting.ClockTime),0,5.1,18)
 RunService.Heartbeat:Connect(function(deltaTime)
 	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
 end)
+
+
+
+
+
+
+
+
+
+
 
 
 
