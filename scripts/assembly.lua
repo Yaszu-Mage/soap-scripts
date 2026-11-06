@@ -34,14 +34,21 @@ local computah = {}
 computah.__index = computah
 
 function computah.new(text,x,y,z)
+local model = Instance.new("Model")
 local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Face = Enum.NormalId.Front
 surfaceGui.CanvasSize = Vector2.new(800,400)
-createPart(x+4.5,y,z+0.5,1,8,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
-createPart(x-4.5,y,z+0.5,1,8,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
-createPart(x,y+4.5,z+0.5,10,1,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
-createPart(x,y,z+1,10,8,1,Enum.Material.Plastic,Color3.fromHex("#808080"))
-surfaceGui.Parent = createPart(x,y,z,8,8,2,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
+local wall1 = createPart(x+4.5,y,z+0.5,1,8,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
+local wall2 = createPart(x-4.5,y,z+0.5,1,8,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
+local wall3 = createPart(x,y+4.5,z+0.5,10,1,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
+local wall4 = createPart(x,y,z+1,10,8,1,Enum.Material.Plastic,Color3.fromHex("#808080"))
+local screen = createPart(x,y,z,8,8,2,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
+surfaceGui.Parent = screen
+screen.Parent = model
+wall1.Parent = model
+wall2.Parent = model
+wall3.Parent = model
+wall4.Parent = model
 local textLabel = Instance.new("TextLabel")
 textLabel.Size = UDim2.new(1, 0, 1, 0)
 textLabel.BackgroundTransparency = 1
@@ -51,8 +58,17 @@ textLabel.TextSize = 32
 textLabel.TextScaled = true 
 textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = surfaceGui
+self.model = model
+return self
 end
 
+function computah:Destroy()
+	if (self.model) then
+		self.model:Destory()
+		self.model = nil
+	end
+	
+end
 function ManagablePart.new(x,y,z,width,height,depth,material,color)
 	local self = setmetatable({}, ManagablePart)
 	self.part = createPart(x, y, z, width, height, depth, material, color)
@@ -309,10 +325,10 @@ houseA:rotate(180)
 local Lighting = game:GetService("Lighting")
 local RunService = game:GetService("RunService")
 local minutesPerSecond = 24
-
+local computah = computah.new(tostring(Lighting.ClockTime),0,5.1,18)
 RunService.Heartbeat:Connect(function(deltaTime)
 	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
-	computah.new(tostring(Lighting.ClockTime),0,5.1,18)
+	computah:Destroy()
 end)
 
 
