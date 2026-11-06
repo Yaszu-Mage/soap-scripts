@@ -115,7 +115,7 @@ local function onCharacterAdded(character)
 
 end
 
-Players.PlayerAdded:Connect(function(player)
+players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then
 		onCharacterAdded(player.Character)
