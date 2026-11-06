@@ -316,9 +316,12 @@ local color = Color3.fromHex("#D9C7A3")
 local randomWall = math.random(10,32)
 local bufferHouse = 10
 local randomY = math.random(10,32)
-local houseA = House.new(64,1,42,randomWall,randomY,randomWall,color,color,color,color)
+local randomY2 = math.random(10,32)
+local randomY3 = math.random(10,32)
+local houseA = House.new(64,1,42,randomWall,randomY2,randomWall,color,color,color,color)
 randomWallTwo = math.random(10,32)
 local houseB = House.new(64 + randomWall + bufferHouse,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
+local houseC = House.new(64 + randomWall2 + randomWall + bufferHouse, 1, 42 + randomWall + bufferHouse + randomWall2, randomY3,color,color,color,color)
 
 houseB:rotate(180)
 houseA:rotate(180)
@@ -330,9 +333,11 @@ local RunService = game:GetService("RunService")
 local minutesPerSecond = 1
 local computah = computah.new(tostring(Lighting.ClockTime),0,5.1,18)
 RunService.Heartbeat:Connect(function(deltaTime)
-	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
+	Lighting/.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
 	
 end)
+
+
 
 
 
