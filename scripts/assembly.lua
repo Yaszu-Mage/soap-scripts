@@ -9,7 +9,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 	part.Size = Vector3.new(width, height, depth)
 	part.Material = material
 	part.BrickColor = BrickColor.new(color)
-	part.Parent = workspace
+	part.Parent = workspace.
 	return part
 end
 
