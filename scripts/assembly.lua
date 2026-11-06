@@ -8,14 +8,20 @@ local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
 local 
 
-local function addAccessoryToCharacter(player, id)
+local function addAccessory(player, id)
 	local success, loadedModel = pcall(function()
 		return insertService:LoadAsset(witchHat)
 	end)
 	if success and loadedModel then
-		local accessory = loadedModel:Find
-	else:
+		local accessory = loadedModel:FindChildOfClass("Accessory")
+		local humanoid = player:WaitForChild("Humanoid")
+		if accessory and humanoid then
+			humanoid:AddAccessory(accessory)
+		end
 
+		loadedModel:Destory()
+	else:
+		warn("Failed:", id)
 	end
 end
 
@@ -25,7 +31,7 @@ end
 
 for _, player in ipairs(everyOne) do 
 	if player.Name == "yaszu"
-		
+		addAccessory(player,witchHat)
 	end
 end
 
