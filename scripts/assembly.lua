@@ -235,9 +235,12 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	wall(x - innerW/2 + segmentWidth/2, sideY, frontZ, segmentWidth, height,wallThickness)
 	wall(x + innerW/2 - segmentWidth/2,sideY,frontZ,segmentWidth,height,wallThickness)
 	wall(x, baseY + doorH + (height - doorH)/2, frontZ, doorW, height - doorH, wallThickness)
+	local backZ = z- depth/2 + wallThickness/2
+
+	local sideSeg
 
 end
 local color = Color3.fromHex("#D9C7A3")
-local randomWall = 10
+local randomWall = math.random(10,32)
 local randomY = math.random(10,32)
 House.new(42,1,42,randomWall,randomY,randomWall,color,color,color,color)
