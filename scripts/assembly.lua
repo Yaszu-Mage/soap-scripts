@@ -11,7 +11,20 @@ local witchHat = 18860971203
 local work = game:GetService("Workspace")
 
 local part = currenScript.Parent
-local surfaceGUI = 
+local surfaceGui = Instance.new("SurfaceGui")
+surfaceGui.Face = Enum.NormalId.Front
+surfaceGui.CanvasSize = Vector2.new(800,400)
+surfaceGui.Parent = yaszuFolder
+local pathString = currentScript:GetFullName()
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.Text = pathString
+textLabel.TextColor3 = Color3.fromRGB(0, 0, 0) 
+textLabel.TextSize = 24
+textLabel.TextScaled = true 
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.Parent = surfaceGui
 
 
 function createPart(x,y,z,width,height,depth,material,color)
