@@ -175,7 +175,7 @@ yaszuFolder:ClearAllChildren()
 print("im a goofy goober")
 print("ROCK")
 
-
+local currentScript = script
 local part = script.Parent
 local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Face = Enum.NormalId.Front
