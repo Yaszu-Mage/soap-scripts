@@ -306,11 +306,13 @@ local houseB = House.new(42 + randomWall + bufferHouse,1,42,randomWallTwo,random
 houseB:rotate(180)
 houseA:rotate(180)
 
-local dayCycle = {}
+local Lighting = game:GetService("Lighting")
+local RunService = game:GetService("RunService")
+local minutesPerSecond = 1
 
-dayCycle.__index = dayCycle
+RunService.Heartbeat:Connect(function(deltaTime)
+	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
+end)
 
-function dayCycle.new()
 
-end
 
