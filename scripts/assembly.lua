@@ -34,6 +34,7 @@ local computah = {}
 computah.__index = computah
 
 function computah.new(text,x,y,z)
+local self = setmetatable({}, computah)
 local model = Instance.new("Model")
 local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Face = Enum.NormalId.Front
@@ -59,7 +60,7 @@ textLabel.TextScaled = true
 textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = surfaceGui
 	self.model = model
-return self
+	return self
 end
 
 function computah:Destroy()
