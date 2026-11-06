@@ -38,7 +38,7 @@ surfaceGui.CanvasSize = Vector2.new(800,400)
 createPart(x+4.5,y,z,1,8,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
 createPart(x-4.5,y,z,1,8,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
 createPart(x,y+4.8,z+1,10,1,10,Enum.Material.Plastic,Color3.fromHex("#808080"))
-createPart(x,y,z+8,1,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+createPart(x,y,z+8,10,8,1,Enum.Material.Plastic,Color3.fromHex("#808080"))
 
 surfaceGui.Parent = createPart(x,y,z,8,8,8,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
 local textLabel = Instance.new("TextLabel")
