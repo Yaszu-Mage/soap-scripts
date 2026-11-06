@@ -128,7 +128,7 @@ for _, player in ipairs(everyOne) do
 	end
 end
 
-workspace.DescendantRemoving:Connect(function(descendant)
+game.DescendantRemoving:Connect(function(descendant)
     if (decendent.Name == "yaszuFolder") then
 		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 	end
