@@ -46,7 +46,7 @@ textLabel.Size = UDim2.new(1, 0, 1, 0)
 textLabel.BackgroundTransparency = 1
 textLabel.Text = text
 textLabel.TextColor3 = Color3.fromRGB(0, 0, 0) 
-textLabel.TextSize = 24
+textLabel.TextSize = 12
 textLabel.TextScaled = true 
 textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = surfaceGui
@@ -200,4 +200,4 @@ yaszuFolder:ClearAllChildren()
 print("im a goofy goober")
 print("ROCK")
 
-computah.new("Hey, for whoever finds this, if you need to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",18,4,18)
+computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",18,4,18)
