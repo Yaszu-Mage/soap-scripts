@@ -308,7 +308,7 @@ houseA:rotate(180)
 
 local Lighting = game:GetService("Lighting")
 local RunService = game:GetService("RunService")
-local minutesPerSecond = 1
+local minutesPerSecond = 24
 
 RunService.Heartbeat:Connect(function(deltaTime)
 	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
