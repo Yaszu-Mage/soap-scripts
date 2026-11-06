@@ -19,7 +19,7 @@ local function addAccessory(player, id)
 		end
 
 		loadedModel:Destory()
-	else:
+	else
 		warn("Failed:", id)
 	end
 end
