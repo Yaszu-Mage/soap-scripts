@@ -299,7 +299,7 @@ local bufferHouse = 10
 local randomY = math.random(10,32)
 local houseA = House.new(42,1,42,randomWall,randomY,randomWall,color,color,color,color)
 randomWallTwo = math.random(10,32)
-local houseB = House.new(42 + randomWall + ,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
+local houseB = House.new(42 + randomWall + bufferHouse,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
 
 
 houseA:rotate(180)
