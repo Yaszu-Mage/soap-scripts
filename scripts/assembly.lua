@@ -128,7 +128,7 @@ end
 players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then
-		ManagablePart.new(8,8,8,4,1,4,Enum.Material.Plastic,"Bright Red")
+		ManagablePart.new(-8,8,-8,4,1,4,Enum.Material.Plastic,"Bright Red")
 		onCharacterAdded(player.Character)
 	end
 end)
