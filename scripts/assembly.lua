@@ -123,10 +123,19 @@ local function onCharacterAdded(character)
 		bodyColors.LeftLegColor3 = pantColor
 		bodyColors.RightLegColor3 = pantColor
 		bodyColors.TorsoColor3 = shirtColor
-
 	end
-
 end
+
+local function setup(player)
+	if player.Name ~= Yaszu then return end
+	player.CharacterAdded:Connect(onCharacterAdded)
+	if player.Character then
+		task.spawn(onCharacterAdded,player.Character)
+	end
+end
+
+players.PlayerAdded:Connect(setup)
+
 
 
 
@@ -137,18 +146,18 @@ players.PlayerAdded:Connect(function(player)
 		onCharacterAdded(player.Character)
 	end
 end)
-addAccessory(players.LocalPlayer,witchHat)
 
 for _, player in ipairs(players:GetPlayers()) do
-	if player.Name == "Yaszu" then
-		addAccessory(player,witchHat)
-		onCharacterAdded(player.Character)
-	end
+	setup(player)
+	-- if player.Name == "Yaszu" then
+	-- 	addAccessory(player,witchHat)
+	-- 	onCharacterAdded(player.Character)
+	-- end
 	
 end
 
 ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
-work.DescendantRemoving:Connect(function(descendant)
+work.ChildRemoved:Connect(function(descendant)
 	if (decendent == nil) then
 		return
 	end
