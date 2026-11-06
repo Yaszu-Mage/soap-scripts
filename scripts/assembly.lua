@@ -1,5 +1,3 @@
-
-workspace:ClearAllChildren()
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
@@ -14,7 +12,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 	part.Size = Vector3.new(width, height, depth)
 	part.Material = material
 	part.BrickColor = BrickColor.new(color)
-	part.Parent = yaszu
+	part.Parent = workspace
 	return part
 end
 
@@ -76,7 +74,7 @@ function ManagablePart:getPosition()
 	end
 end
 
-ManagablePart.new(0,1,0,1,1,1,Enum.Material.Plastic,"Bright Red")
+ManagablePart.new(0,0,0,12,12,12,Enum.Material.Plastic,"Bright Red")
 
 
 print("im a goofy goober")
