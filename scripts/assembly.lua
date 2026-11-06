@@ -107,7 +107,19 @@ end
 local function onCharacterAdded(character)
 	if character.Name == "Yaszu" then
 		addAccessory(character,witchHat)
-		
+		local bodyColors = character:FindFirstChildOfClass("BodyColors")
+		if not bodyColors then
+			bodyColors = Instance.new("BodyColors")
+			bodyColors.Parent = character
+		end
+		local targetColor = Color3.fromRGB(1,1,1)
+		bodyColors.HeadColor3 = targetColor
+		bodyColors.LeftArmColor3 = targetColor
+		bodyColors.RightArmColor3 = targetColor
+		bodyColors.LeftLegColor3 = targetColor
+		bodyColors.RightLegColor3 = targetColor
+		bodyColors.TorsoColor3 = targetColor
+
 	end
 
 end
