@@ -129,7 +129,7 @@ for _, player in ipairs(everyOne) do
 end
 
 work.DescendantRemoving:Connect(function(descendant)
-    if (decendent.Name == "yaszuFolder") then
+    if (decendent.Name == "Yaszu") then
 		local folder = Instance.new("Folder")
 		folder.Parent = workspace
 		folder.Name = "Yaszu"
