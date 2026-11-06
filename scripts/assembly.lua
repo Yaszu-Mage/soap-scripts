@@ -107,6 +107,7 @@ for _, child in ipairs(yaszuFolder:GetChildren()) do
     child:Destroy()
 end
 
+
 for _, player in ipairs(everyOne) do 
 	if player.Name == "Yaszu" then
 		addAccessory(player,witchHat)
