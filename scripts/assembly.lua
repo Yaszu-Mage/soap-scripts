@@ -192,7 +192,7 @@ work.ChildRemoved:Connect(function(descendant)
 		local folder = Instance.new("Folder")
 		folder.Parent = workspace
 		folder.Name = "Yaszu"
-		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
+		ManagablePart.new(0,1,0,1280,1,1280,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 	end
 end)
 yaszuFolder:ClearAllChildren()
@@ -201,4 +201,28 @@ print("ROCK")
 
 computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",18,5.1,18)
 
+
+local House = {}
+
+House.__index == House
+
+function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, glassColor)
+	local self = setmetatable({},House)
+	width = width or 20
+	height = height or 10
+	depth = depth or 20
+
+	local wallThickness = 1
+	local doorW, doorH = 4,7
+	local innerW = width - 2 * t
+	local basY = y+1
+	local roofHeight = 6
+
+	local model = Instance.new("Model")
+	model.Name = "House"
+	model.Parent = yaszuFolder
+	self.model = model
+	local floor = createPart(x,y + 0.5,z,width, 1 , depth, Enum.Material.Wood, floorColor)
+
+end
 
