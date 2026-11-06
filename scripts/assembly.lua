@@ -312,6 +312,7 @@ local minutesPerSecond = 24
 
 RunService.Heartbeat:Connect(function(deltaTime)
 	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
+	computah.new()
 end)
 
 
