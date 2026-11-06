@@ -115,5 +115,4 @@ for _, player in ipairs(everyOne) do
 end
 
 print("im a goofy goober")
-
 print("ROCK")
