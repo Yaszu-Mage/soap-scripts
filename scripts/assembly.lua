@@ -238,8 +238,8 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 		return part
 
 	end
-	local floor = part(x,y + 0.44,z,width, 1 , depth, Enum.Material.Wood, floorColor)
-	local sideY = baseY + height / 2
+	local floor = part(x,y,z,width, 1 , depth, Enum.Material.Wood, floorColor)
+	local sideY = baseY + height / 2 + 0.1
 	wall(x - width/2 + wallThickness/2, sideY, z, wallThickness,height, depth)
 	wall(x + width/2 - wallThickness/2, sideY, z, wallThickness,height, depth)
 	local frontZ = z + depth/2 - wallThickness/2
