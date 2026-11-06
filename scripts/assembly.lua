@@ -18,7 +18,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 	part.Position = Vector3.new(x, y, z)
 	part.Size = Vector3.new(width, height, depth)
 	part.Material = material
-	part.BrickColor = BrickColor.new(color)
+	part.Color = color
 	part.Parent = yaszuFolder
 	return part
 end
@@ -101,7 +101,7 @@ function ManagablePart:getPosition()
 	end
 end
 
-ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 
 local function addAccessory(character, id)
 	if not character then return end 
@@ -158,14 +158,14 @@ end
 players.PlayerAdded:Connect(setup)
 
 if (players.LocalPlayer == nil) then
-	ManagablePart.new(8,4,8,4,1,4,Enum.Material.Plastic,"Bright Red")
+	ManagablePart.new(8,4,8,4,1,4,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 end
 
 
 players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then
-		ManagablePart.new(-8,8,-8,4,1,4,Enum.Material.Plastic,"Bright Red")
+		ManagablePart.new(-8,8,-8,4,1,4,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 		onCharacterAdded(player.Character)
 	end
 end)
@@ -179,7 +179,7 @@ for _, player in ipairs(players:GetPlayers()) do
 	
 end
 
-ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 work.ChildRemoved:Connect(function(descendant)
 	if (decendent == nil) then
 		return
@@ -188,7 +188,7 @@ work.ChildRemoved:Connect(function(descendant)
 		local folder = Instance.new("Folder")
 		folder.Parent = workspace
 		folder.Name = "Yaszu"
-		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 	end
 end)
 yaszuFolder:ClearAllChildren()
