@@ -214,7 +214,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 
 	local wallThickness = 1
 	local doorW, doorH = 4,7
-	local innerW = width - 2 * t
+	local innerW = width - 2 * wallThickness
 	local baseY = y+1
 	local roofHeight = 6
 
