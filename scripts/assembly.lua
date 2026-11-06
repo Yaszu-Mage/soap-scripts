@@ -84,7 +84,9 @@ end
 ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 
 local function addAccessory(player, id)
-	if player == nil then return
+	if player == nil then
+	 return
+	end
 	local humanoid = player:WaitForChild("Humanoid",10)
 	if not humanoid then return end
 	local ok, err = pcall(function()
