@@ -232,7 +232,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	wall(x + width/2 - wallThickness/2, sideY, z, wallThickness,height, depth)
 	local frontZ = z + depth/2 - wallThickness/2
 	local segmentWidth = (innerW - doorW) / 2
-	wall(x - innerW/2 + segW/2, sideY, frontZ, segW, height,wallThickness)
+	wall(x - innerW/2 + segmentWidth/2, sideY, frontZ, segmentWidth, height,wallThickness)
 
 
 end
