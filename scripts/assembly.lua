@@ -7,32 +7,7 @@ local yaszuFolder = Workspace:FindFirstChild("Yaszu")
 local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
 
-local function addAccessory(player, id)
-	local success, loadedModel = pcall(function()
-		return insertService:LoadAsset(witchHat)
-	end)
-	if success and loadedModel then
-		local accessory = loadedModel:FindChildOfClass("Accessory")
-		local humanoid = player:WaitForChild("Humanoid")
-		if accessory and humanoid then
-			humanoid:AddAccessory(accessory)
-		end
 
-		loadedModel:Destory()
-	else
-		warn("Failed:", id)
-	end
-end
-
-for _, child in ipairs(yaszuFolder:GetChildren()) do
-    child:Destroy()
-end
-
-for _, player in ipairs(everyOne) do 
-	if player.Name == "Yaszu" then
-		addAccessory(player,witchHat)
-	end
-end
 
 
 
@@ -106,6 +81,34 @@ end
 
 ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 
+local function addAccessory(player, id)
+	local success, loadedModel = pcall(function()
+		return insertService:LoadAsset(witchHat)
+	end)
+	if success and loadedModel then
+		local accessory = loadedModel:FindChildOfClass("Accessory")
+		local humanoid = player:WaitForChild("Humanoid")
+		if accessory and humanoid then
+			humanoid:AddAccessory(accessory)
+		end
+
+		loadedModel:Destory()
+	else
+		ManagablePart.new(12,4,12,4,1,4,Enum.Material.Plastic,"Bright Red")
+		warn("Failed:", id)
+		
+	end
+end
+
+for _, child in ipairs(yaszuFolder:GetChildren()) do
+    child:Destroy()
+end
+
+for _, player in ipairs(everyOne) do 
+	if player.Name == "Yaszu" then
+		addAccessory(player,witchHat)
+	end
+end
 
 print("im a goofy goober")
 
