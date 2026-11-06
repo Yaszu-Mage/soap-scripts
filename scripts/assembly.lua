@@ -138,6 +138,7 @@ addAccessory(players.LocalPlayer,witchHat)
 
 for _, player in ipairs(players:GetPlayers()) do
 	if player.Name == "Yaszu" then
+		addAccessory(player,witchHat)
 		onCharacterAdded(player.Character)
 	end
 	
