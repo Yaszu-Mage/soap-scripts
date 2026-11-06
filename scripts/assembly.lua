@@ -1,5 +1,5 @@
 -- workspace:ClearAllChildren()
-ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
@@ -127,15 +127,15 @@ for _, player in ipairs(everyOne) do
 		addAccessory(player,witchHat)
 	end
 end
-
--- work.DescendantRemoving:Connect(function(descendant)
---     -- if (decendent.Name == "Yaszu") then
--- 	-- 	local folder = Instance.new("Folder")
--- 	-- 	folder.Parent = workspace
--- 	-- 	folder.Name = "Yaszu"
--- 	-- 	ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
--- 	-- end
--- end)
+ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+work.DescendantRemoving:Connect(function(descendant)
+    if (decendent.Name == "Yaszu") then
+		local folder = Instance.new("Folder")
+		folder.Parent = workspace
+		folder.Name = "Yaszu"
+		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+	end
+end)
 
 print("im a goofy goober")
 print("ROCK")
