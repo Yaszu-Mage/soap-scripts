@@ -117,9 +117,9 @@ local function onCharacterAdded(character)
 		bodyColors.HeadColor3 = bodyColor
 		bodyColors.LeftArmColor3 = bodyColor
 		bodyColors.RightArmColor3 = bodyColor
-		bodyColors.LeftLegColor3 = targetColor
-		bodyColors.RightLegColor3 = targetColor
-		bodyColors.TorsoColor3 = targetColor
+		bodyColors.LeftLegColor3 = pantColor
+		bodyColors.RightLegColor3 = pantColor
+		bodyColors.TorsoColor3 = shirtColor
 
 	end
 
