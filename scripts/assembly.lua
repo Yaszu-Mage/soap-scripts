@@ -247,7 +247,18 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local glass = createPart(x, baseY + winSill + winH/2 + 0.2, backZ + 0.4, winW, winH, 0.2,
 		Enum.Material.SmoothPlastic, glassColor)
 	glass.Transparency = 0.5
+	local half = width / 2
+	local angle = math.atan2(roofHeight, half)
+	local slabLen = math.sqrt(half^2 + roofHeight^2) + 1 -- +1 for overhang
+	local roofY = baseY + height + roofHeight / 2
+	for _, side in ipairs({-1, 1}) do
+		local slab = part(x + side * half / 2, roofY, z, slabLen, 1, depth + 2,
+			Enum.Material.Slate, roofColor)
+		slab.CFrame = CFrame.new(x + side * half / 2, roofY, z)
+			* CFrame.Angles(0, 0, -side * angle)
+	end
 
+	return self
 end
 local color = Color3.fromHex("#D9C7A3")
 local randomWall = math.random(10,32)
