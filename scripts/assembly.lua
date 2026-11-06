@@ -28,10 +28,10 @@ local ManagablePart = {}
 ManagablePart.__index = ManagablePart
 
 
-local print = {}
-print.__index = print
+local computah = {}
+computah.__index = computah
 
-function print.new(text)
+function computah.new(text)
 
 end
 
