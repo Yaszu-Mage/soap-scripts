@@ -65,7 +65,7 @@ end
 
 function computah:Destroy()
 	if (self.model) then
-		self.model:Destory()
+		self.model:Destroy()
 		self.model = nil
 	end
 	
