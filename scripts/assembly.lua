@@ -229,9 +229,11 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	end
 	local sideY = baseY + 10 / 2
 	wall(x - width/2 + wallThickness/2, sideY, z, wallThickness,height, depth)
+	wall(x + width/2 - wallThickness/2, sideY, z, wallThickness,height, depth)
+
 
 
 end
 local color = Color3.fromHex("#D9C7A3")
 
-House.new(32,1,32,4,color,color,color,color)
+House.new(32,1,32,4,4,color,color,color,color)
