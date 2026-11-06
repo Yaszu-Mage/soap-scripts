@@ -200,7 +200,7 @@ print("im a goofy goober")
 print("ROCK")
 
 computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",18,5.1,18)
-computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",24,5.1,18)
+computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",-18,5.1,18)
 
 
 local House = {}
