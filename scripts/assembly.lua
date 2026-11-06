@@ -225,9 +225,10 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local floor = createPart(x,y + 0.5,z,width, 1 , depth, Enum.Material.Wood, floorColor)
 
 	local function wall(px,py,pz,w,h,d)
+		return createPart(px,py,pz,w,h,d,Enum.Material.Plastic, wallColor)
 	end
-
 	local sideY = baseY + height / 2
+	wall(x - width/2 + wallThickness/2, sideY, z, wallThickness,height, depth)
 	
 
 end
