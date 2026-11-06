@@ -3,7 +3,10 @@ folder.Parent = workspace
 folder.Name = "Yaszu"
 
 local yaszu = Workspace:FindFirstChild("Yaszu")
-yaszu:ClearAllChildren()
+
+for _, child in ipairs(yaszu:GetChildren()) do
+    child:Destroy()
+end
 
 function createPart(x,y,z,width,height,depth,material,color)
 	local part = Instance.new("Part")
