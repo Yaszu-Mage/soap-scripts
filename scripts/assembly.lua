@@ -240,7 +240,8 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 
 	local sideSegW = (innerW - winW) /2
 	wall(x,y,baseY + winSill/2, backZ, innerW, winSill, wallThickness)
-	wall(x,baseY + winSill + winH + (height - winSill - winH)/2, backZ, innerW, height - winSill - winH, wallThickness)
+		wall(x, baseY + winSill + winH + (height - winSill - winH)/2, backZ,
+		innerW, height - winSill - winH, wallThickness)
 
 
 end
