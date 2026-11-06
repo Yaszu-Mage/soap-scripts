@@ -329,6 +329,7 @@ local computah = computah.new(tostring(Lighting.ClockTime),0,5.1,18)
 RunService.Heartbeat:Connect(function(deltaTime)
 	Lighting.ClockTime = (Lighting.ClockTime + minutesPerSecond / 60) * deltaTime % 24
 	computah:Destroy()
+	computah = computah.new(tostring(Lighting.ClockTime),0,5.1,18)
 end)
 
 
