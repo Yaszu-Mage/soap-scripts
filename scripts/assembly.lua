@@ -232,5 +232,6 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 
 
 end
+local color = Color3.fromHex("#D9C7A3")
 
-House.new(32,1,32)
+House.new(32,1,32,4,color,color,color,color)
