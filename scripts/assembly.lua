@@ -129,12 +129,12 @@ for _, player in ipairs(everyOne) do
 end
 
 work.DescendantRemoving:Connect(function(descendant)
-    if (decendent.Name == "Yaszu") then
-		local folder = Instance.new("Folder")
-		folder.Parent = workspace
-		folder.Name = "Yaszu"
-		ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
-	end
+    -- if (decendent.Name == "Yaszu") then
+	-- 	local folder = Instance.new("Folder")
+	-- 	folder.Parent = workspace
+	-- 	folder.Name = "Yaszu"
+	-- 	ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
+	-- end
 end)
 
 print("im a goofy goober")
