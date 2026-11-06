@@ -234,7 +234,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local segmentWidth = (innerW - doorW) / 2
 	wall(x - innerW/2 + segmentWidth/2, sideY, frontZ, segmentWidth, height,wallThickness)
 	wall(x + innerW/2 - segmentWidth/2,sideY,frontZ,segmentWidth,height,wallThickness)
-
+	wall(x,baseY + doorH + (height- doorH)/2,frontZ, height - doorH, wallThickness)
 
 end
 local color = Color3.fromHex("#D9C7A3")
