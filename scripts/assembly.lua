@@ -1,5 +1,5 @@
 
-
+workspace:ClearAllChildren()
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
