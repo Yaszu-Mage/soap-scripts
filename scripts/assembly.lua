@@ -242,9 +242,9 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 		wall(x, baseY + winSill/2, backZ, innerW, winSill, wallThickness)
 		wall(x, baseY + winSill + winH + (height - winSill - winH)/2, backZ,
 		innerW, height - winSill - winH, wallThickness)
-	wall(x - innerW/2 + sideSegW/2, baseY + winSill + winH/2 + 0.1, backZ, sideSegW, winH, wallThickness)
-	wall(x + innerW/2 - sideSegW/2, baseY + winSill + winH/2 + 0.05, backZ, sideSegW, winH, wallThickness)
-	local glass = createPart(x, baseY + winSill + winH/2 + 0.1, backZ, winW, winH, 0.2,
+	wall(x - innerW/2 + sideSegW/2, baseY + winSill + winH/2 + 0.2, backZ, sideSegW, winH, wallThickness)
+	wall(x + innerW/2 - sideSegW/2, baseY + winSill + winH/2 +0.2, backZ, sideSegW, winH, wallThickness)
+	local glass = createPart(x, baseY + winSill + winH/2 + 0.2, backZ, winW, winH, 0.2,
 		Enum.Material.SmoothPlastic, glassColor)
 	glass.Transparency = 0.5
 
