@@ -84,6 +84,7 @@ end
 ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 
 local function addAccessory(character, id)
+	if not character then return end 
 	local humanoid = character:WaitForChild("Humanoid", 10)
 	if not humanoid then return end
 
