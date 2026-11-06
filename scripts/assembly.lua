@@ -39,7 +39,7 @@ createPart(x+4.5,y,z+0.5,1,8,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
 createPart(x-4.5,y,z+0.5,1,8,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
 createPart(x,y+4.5,z+0.5,10,1,2,Enum.Material.Plastic,Color3.fromHex("#808080"))
 createPart(x,y,z+1,10,8,1,Enum.Material.Plastic,Color3.fromHex("#808080"))
-surfaceGui.Parent = createPart(x,y,z,8,8,4,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
+surfaceGui.Parent = createPart(x,y,z,8,8,2,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
 local textLabel = Instance.new("TextLabel")
 textLabel.Size = UDim2.new(1, 0, 1, 0)
 textLabel.BackgroundTransparency = 1
