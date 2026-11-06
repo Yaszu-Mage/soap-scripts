@@ -260,7 +260,32 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 
 	return self
 end
+
+function House:getModel()
+	return self.model
+end
+
+function House:destroy()
+	if self.model then
+		self.model:Destroy()
+		self.model = nil
+	end
+end
+function House:rotate(degrees)
+	if self.model then
+		self.model:PivotTo(self.model:GetPivot() * CFrame.Angles(0, math.rad(degrees), 0))
+	end
+end
+function House:setRotation(degrees)
+	if self.model then
+		local pos = self.model:GetPivot().Position
+		self.model:PivotTo(CFrame.new(pos) * CFrame.Angles(0, math.rad(degrees), 0))
+	end
+end
 local color = Color3.fromHex("#D9C7A3")
 local randomWall = math.random(10,32)
 local randomY = math.random(10,32)
-House.new(42,1,42,randomWall,randomY,randomWall,color,color,color,color)
+local houseA = House.new(42,1,42,randomWall,randomY,randomWall,color,color,color,color)
+
+houseA:setRotation(90)
+
