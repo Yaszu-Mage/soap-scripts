@@ -8,7 +8,7 @@ local everyOne = players:GetPlayers()
 local yaszuFolder = Workspace:FindFirstChild("Yaszu")
 local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
-
+local work = game:GetService("Workspace")
 
 
 
@@ -128,7 +128,7 @@ for _, player in ipairs(everyOne) do
 	end
 end
 
-game.DescendantRemoving:Connect(function(descendant)
+work.DescendantRemoving:Connect(function(descendant)
     if (decendent.Name == "yaszuFolder") then
 		local folder = Instance.new("Folder")
 		folder.Parent = workspace
