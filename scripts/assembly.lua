@@ -266,7 +266,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 		slab.CFrame = CFrame.new(x + side * half / 2, roofY, z)
 			* CFrame.Angles(0, 0, -side * angle)
 	end
-	self.model = 
+	self.model = model
 	return self
 end
 
