@@ -4,15 +4,31 @@ folder.Name = "Yaszu"
 local players = game:GetService("Players")
 local everyOne = Players:GetPlayers()
 local yaszuFolder = Workspace:FindFirstChild("Yaszu")
+local insertService = game:GetService("InsertService")
+local witchHat = 18860971203
+local 
+
+local function addAccessoryToCharacter(player, id)
+	local success, loadedModel = pcall(function()
+		return insertService:LoadAsset(witchHat)
+	end)
+	if success and loadedModel then
+		local accessory = loadedModel:Find
+	else:
+
+	end
+end
 
 for _, child in ipairs(yaszuFolder:GetChildren()) do
     child:Destroy()
 end
 
 for _, player in ipairs(everyOne) do 
-	if (player.Name == "yaszu")
+	if player.Name == "yaszu"
+		
 	end
 end
+
 
 
 function createPart(x,y,z,width,height,depth,material,color)
