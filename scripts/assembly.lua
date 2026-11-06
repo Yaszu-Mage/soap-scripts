@@ -287,5 +287,5 @@ local randomWall = math.random(10,32)
 local randomY = math.random(10,32)
 local houseA = House.new(42,1,42,randomWall,randomY,randomWall,color,color,color,color)
 
-houseA:setRotation(180)
+houseA:rotate(180)
 
