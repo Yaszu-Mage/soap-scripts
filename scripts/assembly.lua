@@ -89,7 +89,7 @@ local function addAccessory(character, id)
 	if not humanoid then return end
 
 	local success, loadedModel = pcall(function()
-		return InsertService:LoadAsset(id)
+		return insertService:LoadAsset(id)
 	end)
 
 	if success and loadedModel then
@@ -131,6 +131,7 @@ local function setup(player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then
 		task.spawn(onCharacterAdded,player.Character)
+		addAccessory(player,witchHat)
 	end
 end
 
