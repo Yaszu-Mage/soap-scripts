@@ -215,7 +215,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local wallThickness = 1
 	local doorW, doorH = 4,7
 	local innerW = width - 2 * t
-	local basY = y+1
+	local baseY = y+1
 	local roofHeight = 6
 
 	local model = Instance.new("Model")
@@ -223,6 +223,12 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	model.Parent = yaszuFolder
 	self.model = model
 	local floor = createPart(x,y + 0.5,z,width, 1 , depth, Enum.Material.Wood, floorColor)
+
+	local function wall(px,py,pz,w,h,d)
+	end
+
+	local sideY = baseY + height / 2
+	
 
 end
 
