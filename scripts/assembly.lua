@@ -83,20 +83,22 @@ end
 
 ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 
-local function addAccessory(player, id)
-	if player == nil then
-	 return
-	end
-	local humanoid = player:WaitForChild("Humanoid",10)
+local function addAccessory(character, id)
+	local humanoid = character:WaitForChild("Humanoid", 10)
 	if not humanoid then return end
-	local ok, err = pcall(function()
-		local desc = humanoid:GetAppliedDescription()
-		local existing = desc.HatAccessory
-		desc.HatAccessory = (existing ~= "" and existing .. "," or "") .. tostring(id)
-		humanoid:ApplyDescription(desc)
+
+	local success, loadedModel = pcall(function()
+		return InsertService:LoadAsset(id)
 	end)
-	if not ok then
-		warn("ApplyDescription failed:", err)
+
+	if success and loadedModel then
+		local accessory = loadedModel:FindFirstChildOfClass("Accessory")
+		if accessory then
+			humanoid:AddAccessory(accessory)
+		end
+		loadedModel:Destroy()
+	else
+		warn("Failed to load asset:", id, loadedModel)
 	end
 end
 
