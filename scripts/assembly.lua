@@ -6,7 +6,6 @@ local everyOne = Players:GetPlayers()
 local yaszuFolder = Workspace:FindFirstChild("Yaszu")
 local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
-local 
 
 local function addAccessory(player, id)
 	local success, loadedModel = pcall(function()
@@ -30,7 +29,7 @@ for _, child in ipairs(yaszuFolder:GetChildren()) do
 end
 
 for _, player in ipairs(everyOne) do 
-	if player.Name == "yaszu"
+	if player.Name == "Yaszu"
 		addAccessory(player,witchHat)
 	end
 end
