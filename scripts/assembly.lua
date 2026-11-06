@@ -25,7 +25,7 @@ function createPart(x,y,z,width,height,depth,material,color)
 end
 
 
-createPart(0,0,0,256,256,0,Enum.Material.Plastic,Color.fromRGB(255,255,255))
+createPart(0,0,0,256,256,0,Enum.Material.Plastic,Color3.fromRGB(255,255,255))
 
 local ManagablePart = {}
 
