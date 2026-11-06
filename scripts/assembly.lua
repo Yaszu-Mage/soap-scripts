@@ -297,8 +297,8 @@ local color = Color3.fromHex("#D9C7A3")
 local randomWall = math.random(10,32)
 local randomY = math.random(10,32)
 local houseA = House.new(42,1,42,randomWall,randomY,randomWall,color,color,color,color)
-randomWall = math.random(10,32)
-local houseB = House.new(16,1,42,randomWall,randomY,randomWall,color,color,color,color)
+randomWallTwo = math.random(10,32)
+local houseB = House.new(42 + randomWall,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
 
 
 houseA:rotate(180)
