@@ -1,5 +1,8 @@
 -- workspace:ClearAllChildren()
 
+
+
+
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
@@ -301,6 +304,6 @@ local houseA = House.new(42,1,42,randomWall,randomY,randomWall,color,color,color
 randomWallTwo = math.random(10,32)
 local houseB = House.new(42 + randomWall + bufferHouse,1,42,randomWallTwo,randomY,randomWallTwo,color,color,color,color)
 
-
+houseB:rotate(180)
 houseA:rotate(180)
 
