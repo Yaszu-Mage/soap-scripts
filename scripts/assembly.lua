@@ -137,7 +137,9 @@ end
 
 players.PlayerAdded:Connect(setup)
 
-
+if (players.LocalPlayer == nil) then
+	ManagablePart.new(8,1,8,4,1,4,Enum.Material.Plastic,"Bright Red")
+end
 
 
 players.PlayerAdded:Connect(function(player)
