@@ -238,5 +238,5 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 
 end
 local color = Color3.fromHex("#D9C7A3")
-
+local randomX = math.random(10,)
 House.new(42,1,42,32,16,32,color,color,color,color)
