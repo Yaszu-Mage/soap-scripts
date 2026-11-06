@@ -252,7 +252,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local slabLen = math.sqrt(half^2 + roofHeight^2) + 1 -- +1 for overhang
 	local roofY = baseY + height + roofHeight / 2
 	for _, side in ipairs({-1, 1}) do
-		local slab = part(x + side * half / 2, roofY, z, slabLen, 1, depth + 2,
+		local slab = createPart(x + side * half / 2, roofY, z, slabLen, 1, depth + 2,
 			Enum.Material.Slate, roofColor)
 		slab.CFrame = CFrame.new(x + side * half / 2, roofY, z)
 			* CFrame.Angles(0, 0, -side * angle)
