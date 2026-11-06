@@ -116,6 +116,6 @@ for _, player in ipairs(everyOne) do
 end
 
 
-ManagablePart.new(128,1,128,0,0,0,Enum.Material.Plastic,"Bright Red")
+ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 print("im a goofy goober")
 print("ROCK")
