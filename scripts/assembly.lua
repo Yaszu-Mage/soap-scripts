@@ -24,6 +24,9 @@ function createPart(x,y,z,width,height,depth,material,color)
 	return part
 end
 
+
+createPart(0,0,0,128,128,0,Enum.Material.Plastic,Color.fromRGB(255,255,255))
+
 local ManagablePart = {}
 
 ManagablePart.__index = ManagablePart
@@ -106,7 +109,6 @@ function ManagablePart:getPosition()
 	end
 end
 
-ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
 
 local function addAccessory(character, id)
 	if not character then return end 
@@ -185,7 +187,7 @@ for _, player in ipairs(players:GetPlayers()) do
 	
 end
 
-ManagablePart.new(0,1,0,256,1,256,Enum.Material.Plastic,Color3.fromHex("#3E1550"))
+
 work.ChildRemoved:Connect(function(descendant)
 	if (decendent == nil) then
 		return
