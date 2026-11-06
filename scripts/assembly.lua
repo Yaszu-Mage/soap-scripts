@@ -1,4 +1,4 @@
-workspace:ClearAllChildren()
+-- workspace:ClearAllChildren()
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
@@ -108,7 +108,16 @@ for _, child in ipairs(yaszuFolder:GetChildren()) do
     child:Destroy()
 end
 
+local function onCharacterAdded(character)
+	if character.Name == "Yaszu" then
+		addAccessory(player,witchHat)
+	end
 
+
+end
+
+Players.PlayerAdded:Connect(function(player)
+end)
 for _, player in ipairs(everyOne) do 
 	if player.Name == "Yaszu" then
 		addAccessory(player,witchHat)
