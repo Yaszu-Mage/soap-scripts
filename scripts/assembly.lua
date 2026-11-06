@@ -114,11 +114,8 @@ players.PlayerAdded:Connect(function(player)
 		onCharacterAdded(player.Character)
 	end
 end)
-for _, player in ipairs(everyOne) do 
-	if player.Name == "Yaszu" then
-		addAccessory(player,witchHat)
-	end
-end
+addAccessory(players.LocalPlayer,witchHat)
+
 ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 work.DescendantRemoving:Connect(function(descendant)
     if (decendent.Name == "Yaszu") then
