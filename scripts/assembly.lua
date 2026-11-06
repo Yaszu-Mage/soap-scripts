@@ -204,7 +204,7 @@ computah.new("Hey, for whoever finds this, if you need console access or to prin
 
 local House = {}
 
-House.__index == House
+House.__index = House
 
 function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, glassColor)
 	local self = setmetatable({},House)
@@ -229,7 +229,8 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	end
 	local sideY = baseY + height / 2
 	wall(x - width/2 + wallThickness/2, sideY, z, wallThickness,height, depth)
-	
+
 
 end
 
+House.new(32,1,32)
