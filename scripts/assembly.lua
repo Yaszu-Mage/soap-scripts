@@ -113,7 +113,7 @@ local function onCharacterAdded(character)
 		end
 		local shirtColor = Color3.new(0,0,0)
 		local bodyColor = Color3.new(1,1,1)
-		local pantColor = Color3.new(0.75,0.75,0.75)
+		local pantColor = Color3.new(0.9,0.9,0.9)
 		bodyColors.HeadColor3 = bodyColor
 		bodyColors.LeftArmColor3 = bodyColor
 		bodyColors.RightArmColor3 = bodyColor
