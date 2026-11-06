@@ -84,24 +84,16 @@ end
 ManagablePart.new(0,0,0,128,1,128,Enum.Material.Plastic,"Bright Red")
 
 local function addAccessory(player, id)
-	local success, loadedModel = pcall(function()
-		return insertService:LoadAsset(witchHat)
+	local humanoid = player:WaitForChild("Humanoid",10)
+	if not humanoid then return end
+	local ok, err = pcall(function()
+		local desc = humanoid:GetAppliedDescription()
+		local existing = desc.HatAccessory
+		desc.HatAccessory = (existing ~= "" and existing .. "," or "") .. tostring(id)
+		humanoid:ApplyDescription(desc)
 	end)
-	if loadedModel then
-		ManagablePart.new(12,8,12,4,1,4,Enum.Material.Plastic,"Bright Red")
-	end
-	if success and loadedModel then
-		local accessory = loadedModel:FindChildOfClass("Accessory")
-		local humanoid = player:WaitForChild("Humanoid")
-		if accessory and humanoid then
-			humanoid:AddAccessory(accessory)
-		end
-
-		loadedModel:Destory()
-	else
-		ManagablePart.new(12,4,12,4,1,4,Enum.Material.Plastic,"Bright Red")
-		warn("Failed:", id)
-		
+	if not ok then
+		warn("ApplyDescription failed:", err)
 	end
 end
 
