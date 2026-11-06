@@ -223,7 +223,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	model.Name = "House"
 	model.Parent = yaszuFolder
 	self.model = model
-	local floor = createPart(x,y + 0.5,z,width, 1 , depth, Enum.Material.Wood, floorColor)
+	local floor = part(x,y + 0.5,z,width, 1 , depth, Enum.Material.Wood, floorColor)
 
 	local function wall(px,py,pz,w,h,d)
 		local part = createPart(px,py,pz,w,h,d,Enum.Material.Plastic, wallColor)
