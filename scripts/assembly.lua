@@ -214,6 +214,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 
 	local wallThickness = 1
 	local doorW, doorH = 4,7
+	local winW, winH, winSill = 5, 4, 3
 	local innerW = width - 2 * wallThickness
 	local baseY = y+1
 	local roofHeight = 6
@@ -237,7 +238,10 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	wall(x, baseY + doorH + (height - doorH)/2, frontZ, doorW, height - doorH, wallThickness)
 	local backZ = z- depth/2 + wallThickness/2
 
-	local sideSeg
+	local sideSegW = (innerW - winW) /2
+	wall(x,y,baseY + winSill/2, backZ, innerW, winSill, wallThickness)
+	wall(x,baseY + winSill + winH + (height - winSill - winH)/2, backZ, innerW, height - winSill - winH, wallThickness)
+
 
 end
 local color = Color3.fromHex("#D9C7A3")
