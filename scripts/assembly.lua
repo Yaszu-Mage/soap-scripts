@@ -127,7 +127,7 @@ local function onCharacterAdded(character)
 end
 
 local function setup(player)
-	if player.Name ~= Yaszu then return end
+	if player.Name ~= "Yaszu" then return end
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then
 		task.spawn(onCharacterAdded,player.Character)
