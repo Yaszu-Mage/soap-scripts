@@ -123,12 +123,12 @@ local function onCharacterAdded(character)
 
 end
 
--- players.PlayerAdded:Connect(function(player)
--- 	player.CharacterAdded:Connect(onCharacterAdded)
--- 	if player.Character then
--- 		onCharacterAdded(player.Character)
--- 	end
--- end)
+players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(onCharacterAdded)
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+end)
 addAccessory(players.LocalPlayer,witchHat)
 
 ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
