@@ -136,8 +136,9 @@ addAccessory(players.LocalPlayer,witchHat)
 
 for _, player in ipairs(players:GetPlayers()) do
 	if player.Name = "Yaszu" then
+		onCharacterAdded(player.Character)
 	end
-	onCharacterAdded(player.Character)
+	
 end
 
 ManagablePart.new(0,1,0,128,1,128,Enum.Material.Plastic,"Bright Red")
