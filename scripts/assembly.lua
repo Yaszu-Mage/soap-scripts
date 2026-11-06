@@ -35,7 +35,11 @@ function computah.new(text,x,y,z)
 local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Face = Enum.NormalId.Front
 surfaceGui.CanvasSize = Vector2.new(800,400)
-createPart(x+8,y,z)
+createPart(x+8,y,z,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+createPart(x-8,y,z,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+createPart(8,y+8,z,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+createPart(8,y,z+8,8,1,8,Enum.Material.Plastic,Color3.fromHex("#808080"))
+
 surfaceGui.Parent = createPart(x,y,z,8,8,8,Enum.Material.Plastic,Color3.fromHex("#ADD8E6"))
 local textLabel = Instance.new("TextLabel")
 textLabel.Size = UDim2.new(1, 0, 1, 0)
