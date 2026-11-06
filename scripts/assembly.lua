@@ -107,6 +107,7 @@ end
 local function onCharacterAdded(character)
 	if character.Name == "Yaszu" then
 		addAccessory(character,witchHat)
+		
 	end
 
 end
