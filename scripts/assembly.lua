@@ -226,7 +226,16 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local floor = createPart(x,y + 0.5,z,width, 1 , depth, Enum.Material.Wood, floorColor)
 
 	local function wall(px,py,pz,w,h,d)
-		return createPart(px,py,pz,w,h,d,Enum.Material.Plastic, wallColor)
+		local part = createPart(px,py,pz,w,h,d,Enum.Material.Plastic, wallColor)
+		part.Parent = model
+		return part
+	end
+
+	local function part(x,y,z,width,height,depth,material,color)
+		local part = createPart(x,y,z,width,height,depth,material,color)
+		part.Parent = model
+		return part
+
 	end
 	local sideY = baseY + height / 2
 	wall(x - width/2 + wallThickness/2, sideY, z, wallThickness,height, depth)
@@ -244,7 +253,7 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 		innerW, height - winSill - winH, wallThickness)
 	wall(x - innerW/2 + sideSegW/2, baseY + winSill + winH/2 + 0.2, backZ, sideSegW, winH, wallThickness)
 	wall(x + innerW/2 - sideSegW/2, baseY + winSill + winH/2 +0.2, backZ, sideSegW, winH, wallThickness)
-	local glass = createPart(x, baseY + winSill + winH/2 + 0.2, backZ + 0.4, winW, winH, 0.2,
+	local glass = part(x, baseY + winSill + winH/2 + 0.2, backZ + 0.4, winW, winH, 0.2,
 		Enum.Material.SmoothPlastic, glassColor)
 	glass.Transparency = 0.5
 	local half = width / 2
@@ -252,12 +261,12 @@ function House.new(x,y,z,width,height,depth, wallColor, floorColor, roofColor, g
 	local slabLen = math.sqrt(half^2 + roofHeight^2) + 1 -- +1 for overhang
 	local roofY = baseY + height + roofHeight / 2
 	for _, side in ipairs({-1, 1}) do
-		local slab = createPart(x + side * half / 2, roofY, z, slabLen, 1, depth + 2,
+		local slab = part(x + side * half / 2, roofY, z, slabLen, 1, depth + 2,
 			Enum.Material.Slate, roofColor)
 		slab.CFrame = CFrame.new(x + side * half / 2, roofY, z)
 			* CFrame.Angles(0, 0, -side * angle)
 	end
-
+	self.model = 
 	return self
 end
 
