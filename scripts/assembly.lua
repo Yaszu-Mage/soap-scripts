@@ -176,7 +176,7 @@ print("im a goofy goober")
 print("ROCK")
 
 
-local part = currenScript.Parent
+local part = currentScript.Parent
 local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Face = Enum.NormalId.Front
 surfaceGui.CanvasSize = Vector2.new(800,400)
