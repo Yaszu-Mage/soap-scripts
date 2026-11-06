@@ -10,21 +10,7 @@ local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
 local work = game:GetService("Workspace")
 
-local part = currenScript.Parent
-local surfaceGui = Instance.new("SurfaceGui")
-surfaceGui.Face = Enum.NormalId.Front
-surfaceGui.CanvasSize = Vector2.new(800,400)
-surfaceGui.Parent = yaszuFolder
-local pathString = currentScript:GetFullName()
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundTransparency = 1
-textLabel.Text = pathString
-textLabel.TextColor3 = Color3.fromRGB(0, 0, 0) 
-textLabel.TextSize = 24
-textLabel.TextScaled = true 
-textLabel.Font = Enum.Font.SourceSansBold
-textLabel.Parent = surfaceGui
+
 
 
 function createPart(x,y,z,width,height,depth,material,color)
@@ -188,3 +174,20 @@ end)
 yaszuFolder:ClearAllChildren()
 print("im a goofy goober")
 print("ROCK")
+
+
+local part = currenScript.Parent
+local surfaceGui = Instance.new("SurfaceGui")
+surfaceGui.Face = Enum.NormalId.Front
+surfaceGui.CanvasSize = Vector2.new(800,400)
+surfaceGui.Parent = createPart(4,4,4,8,8,8,Enum.Material.Plastic,"Bright Red")
+local pathString = currentScript:GetFullName()
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.Text = pathString
+textLabel.TextColor3 = Color3.fromRGB(0, 0, 0) 
+textLabel.TextSize = 24
+textLabel.TextScaled = true 
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.Parent = surfaceGui
