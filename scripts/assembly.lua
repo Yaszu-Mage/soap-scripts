@@ -31,8 +31,20 @@ ManagablePart.__index = ManagablePart
 local computah = {}
 computah.__index = computah
 
-function computah.new(text)
-
+function computah.new(text,x,y,z)
+local surfaceGui = Instance.new("SurfaceGui")
+surfaceGui.Face = Enum.NormalId.Front
+surfaceGui.CanvasSize = Vector2.new(800,400)
+surfaceGui.Parent = createPart(x,y,z,8,8,8,Enum.Material.Plastic,"Bright Red")
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.Text = text
+textLabel.TextColor3 = Color3.fromRGB(0, 0, 0) 
+textLabel.TextSize = 24
+textLabel.TextScaled = true 
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.Parent = surfaceGui
 end
 
 function ManagablePart.new(x,y,z,width,height,depth,material,color)
@@ -183,19 +195,4 @@ yaszuFolder:ClearAllChildren()
 print("im a goofy goober")
 print("ROCK")
 
-local currentScript = script
-local part = script.Parent
-local surfaceGui = Instance.new("SurfaceGui")
-surfaceGui.Face = Enum.NormalId.Front
-surfaceGui.CanvasSize = Vector2.new(800,400)
-surfaceGui.Parent = createPart(18,4,18,8,8,8,Enum.Material.Plastic,"Bright Red")
-local pathString = currentScript:GetFullName()
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundTransparency = 1
-textLabel.Text = pathString
-textLabel.TextColor3 = Color3.fromRGB(0, 0, 0) 
-textLabel.TextSize = 24
-textLabel.TextScaled = true 
-textLabel.Font = Enum.Font.SourceSansBold
-textLabel.Parent = surfaceGui
+computah.new("Hi my name is Yaszu",18,4,18)
