@@ -200,4 +200,4 @@ yaszuFolder:ClearAllChildren()
 print("im a goofy goober")
 print("ROCK")
 
-computah.new("Hi my name is Yaszu",18,4,18)
+computah.new("Hey, for whoever finds this, if you need console access or to print something, let @Yaszu know, I made a computah class so you can just make it physical. Okay have fun!",18,4,18)
