@@ -27,6 +27,14 @@ local ManagablePart = {}
 
 ManagablePart.__index = ManagablePart
 
+
+local print = {}
+print.__index = print
+
+function print.new(text)
+
+end
+
 function ManagablePart.new(x,y,z,width,height,depth,material,color)
 	local self = setmetatable({}, ManagablePart)
 	self.part = createPart(x, y, z, width, height, depth, material, color)
@@ -191,3 +199,5 @@ textLabel.TextSize = 24
 textLabel.TextScaled = true 
 textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = surfaceGui
+
+
