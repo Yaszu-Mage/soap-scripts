@@ -111,10 +111,12 @@ local function onCharacterAdded(character)
 			bodyColors = Instance.new("BodyColors")
 			bodyColors.Parent = character
 		end
-		local targetColor = Color3.fromRGB(1,1,1)
-		bodyColors.HeadColor3 = targetColor
-		bodyColors.LeftArmColor3 = targetColor
-		bodyColors.RightArmColor3 = targetColor
+		local shirtColor = Color3.fromRGB(1,1,1)
+		local bodyColor = Color3.fromRGB(0,0,0)
+		local pantColor = Color3.fromRGB(0.75,0.75,0.75)
+		bodyColors.HeadColor3 = bodyColor
+		bodyColors.LeftArmColor3 = bodyColor
+		bodyColors.RightArmColor3 = bodyColor
 		bodyColors.LeftLegColor3 = targetColor
 		bodyColors.RightLegColor3 = targetColor
 		bodyColors.TorsoColor3 = targetColor
