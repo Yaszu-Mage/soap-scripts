@@ -1,7 +1,4 @@
 -- workspace:ClearAllChildren()
-local yaszuFolder = workspace:FindFirstChild("Yaszu")
-
-yaszuFolder:Destroy()
 
 
 local folder = Instance.new("Folder")
@@ -9,7 +6,7 @@ folder.Parent = workspace
 folder.Name = "Yaszu"
 local players = game:GetService("Players")
 local everyOne = players:GetPlayers()
-
+local yaszuFolder = workspace:FindFirstChild("Yaszu")
 local insertService = game:GetService("InsertService")
 local witchHat = 18860971203
 local work = game:GetService("Workspace")
