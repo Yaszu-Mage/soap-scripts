@@ -58,7 +58,7 @@ textLabel.TextSize = 32
 textLabel.TextScaled = true 
 textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = surfaceGui
-self.model = model
+	self.model = model
 return self
 end
 
