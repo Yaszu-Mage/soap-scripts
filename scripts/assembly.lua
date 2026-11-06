@@ -1,4 +1,4 @@
--- workspace:ClearAllChildren()
+workspace:ClearAllChildren()
 
 local folder = Instance.new("Folder")
 folder.Parent = workspace
