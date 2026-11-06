@@ -131,7 +131,7 @@ local function setup(player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then
 		task.spawn(onCharacterAdded,player.Character)
-		addAccessory(player,witchHat)
+		-- addAccessory(player,witchHat)
 	end
 end
 
