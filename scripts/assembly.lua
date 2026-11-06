@@ -1,3 +1,4 @@
+workspace:ClearAllChildren()
 local folder = Instance.new("Folder")
 folder.Parent = workspace
 folder.Name = "Yaszu"
@@ -114,5 +115,7 @@ for _, player in ipairs(everyOne) do
 	end
 end
 
+
+ManagablePart.new(128,1,128,0,0,0,Enum.Material.Plastic,"Bright Red")
 print("im a goofy goober")
 print("ROCK")
