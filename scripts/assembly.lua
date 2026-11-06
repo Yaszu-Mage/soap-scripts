@@ -1,5 +1,10 @@
 
 
+local folder = Instance.new("Folder")
+folder.Parent = workspace
+folder.name = "Yaszu"
+
+local yaszu = Workspace:FindFirstChild("Yaszu")
 
 
 
